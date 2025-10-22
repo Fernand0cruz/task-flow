@@ -29,3 +29,34 @@ header h1 {
     font-size: 24px;
     color: #aaa;
 }
+
+.add-btn {
+    background: #16a34a;
+    border: none;
+    padding: 10px 16px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controls input,
+.controls select {
+    background: #222;
+    color: #f0f0f0;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.add-btn:hover {
+    background: #22c55e;
+}

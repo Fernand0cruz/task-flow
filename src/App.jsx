@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
+import Controls from "./components/Controls";
 
 function App() {
     return (
@@ -8,6 +9,7 @@ function App() {
             <Header />
 
             {/*Controls*/}
+            {<Controls />}
 
             {/*Task List*/}
         </div>
