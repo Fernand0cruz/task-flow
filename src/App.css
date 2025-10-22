@@ -60,3 +60,67 @@ header h1 {
 .add-btn:hover {
     background: #22c55e;
 }
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: 0.3s;
+}
+
+.task-item h3 {
+    margin: 0;
+    color: #fff;
+}
+
+.task-item p {
+    margin: 5px 0 0;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.task-date {
+    display: block;
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 24px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.status-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.delete-btn {
+  background: #b91c1c;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}

@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Controls from "./components/Controls";
+import TaskList from "./components/TaskList";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             {<Controls />}
 
             {/*Task List*/}
+            {<TaskList/>}
         </div>
     );
 }
