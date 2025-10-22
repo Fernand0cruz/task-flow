@@ -1,4 +1,4 @@
-const Controls = () => {
+const Controls = ({ openAddModal }) => {
     return (
         <div className="controls">
             <input
@@ -12,7 +12,9 @@ const Controls = () => {
                 <option value="pending">Pendentes</option>
             </select>
 
-            <button className="add-btn">Nova Tarefa</button>
+            <button className="add-btn" onClick={openAddModal}>
+                Nova Tarefa
+            </button>
         </div>
     );
 };
