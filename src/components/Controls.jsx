@@ -1,9 +1,11 @@
-const Controls = ({ openAddModal }) => {
+const Controls = ({ search, setSearch, openAddModal }) => {
     return (
         <div className="controls">
             <input
                 type="text"
                 placeholder="🔍Buscar por título ou descrição..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
             />
 
             <select>

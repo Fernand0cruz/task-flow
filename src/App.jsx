@@ -11,6 +11,7 @@ function App() {
     const [showDeleteModal, setShowDeleteModal] = useState(null);
     const [loaded, setLoaded] = useState(false);
     const [tasks, setTasks] = useState([]);
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
         const saved = localStorage.getItem("tasks");
@@ -53,6 +54,13 @@ function App() {
 
     const completedCount = tasks.filter((t) => t.done).length;
 
+    const filteredTasks = tasks.filter((t) => {
+        const matchesSearch =
+            t.title.toLowerCase().includes(search.toLowerCase()) ||
+            t.description.toLowerCase().includes(search.toLowerCase());
+        return matchesSearch;
+    });
+
     return (
         <div className="app-container">
             {/*Header */}
@@ -62,12 +70,16 @@ function App() {
             />
 
             {/*Controls*/}
-            <Controls openAddModal={() => setShowAddModal(true)} />
+            <Controls
+                search={search}
+                setSearch={setSearch}
+                openAddModal={() => setShowAddModal(true)}
+            />
 
             {/*Task List*/}
             <TaskList
                 onToggle={toggleStatus}
-                tasks={tasks}
+                tasks={filteredTasks}
                 onDelete={setShowDeleteModal}
             />
 
