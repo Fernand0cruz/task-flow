@@ -3,8 +3,10 @@ function DeleteModal({ onConfirm, onCancel }) {
         <div className="modal-overlay">
             <div className="modal">
                 <h2>Excluir tarefa?</h2>
-                <p>Certeza que deseja excluire essa tarefa?</p>
+                <p>Certeza que deseja excluir essa tarefa?</p>
                 <p>Essa ação não pode ser desfeita.</p>
+
+                {/* botoes de acao do modal */}
                 <div className="modal-actions">
                     <button className="red" onClick={onConfirm}>
                         Excluir

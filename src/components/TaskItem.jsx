@@ -1,6 +1,7 @@
 const TaskItem = ({ onToggle, task, onDelete }) => {
     return (
         <li className={`task-item ${task.done ? "done" : ""}`}>
+            {/* informacoes da tarefa */}
             <div className="task-info">
                 <h3>{task.title}</h3>
 
@@ -11,6 +12,7 @@ const TaskItem = ({ onToggle, task, onDelete }) => {
                 </small>
             </div>
 
+            {/* botoes de acao */}
             <div className="actions">
                 <button
                     className={`status-btn ${task.done ? "green" : "gray"}`}

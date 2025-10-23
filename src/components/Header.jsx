@@ -3,6 +3,7 @@ const Header = ({ completed, pending }) => {
         <header>
             <h1>Sua Lista de Tarefas!</h1>
 
+            {/* estatisticas das tarefas */}
             <div className="stats">
                 <span>Concluídas: {completed}</span>
                 <span>Pendentes: {pending}</span>
