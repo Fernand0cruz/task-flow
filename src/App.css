@@ -78,6 +78,10 @@ header h1 {
     transition: 0.3s;
 }
 
+.task-item.done {
+    background: #064e3b;
+}
+
 .task-item h3 {
     margin: 0;
     color: #fff;

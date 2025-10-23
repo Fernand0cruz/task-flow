@@ -51,10 +51,15 @@ function App() {
         setTasks(tasks.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
     }
 
+    const completedCount = tasks.filter((t) => t.done).length;
+
     return (
         <div className="app-container">
             {/*Header */}
-            <Header />
+            <Header
+                completed={completedCount}
+                pending={tasks.length - completedCount}
+            />
 
             {/*Controls*/}
             <Controls openAddModal={() => setShowAddModal(true)} />

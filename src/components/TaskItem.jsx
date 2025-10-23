@@ -1,6 +1,6 @@
 const TaskItem = ({ onToggle, task, onDelete }) => {
     return (
-        <li className="task-item">
+        <li className={`task-item ${task.done ? "done" : ""}`}>
             <div className="task-info">
                 <h3>{task.title}</h3>
 

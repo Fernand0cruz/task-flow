@@ -1,14 +1,14 @@
-const Header = () => {
+const Header = ({ completed, pending }) => {
     return (
         <header>
             <h1>Sua Lista de Tarefas!</h1>
 
             <div className="stats">
-                <span>✅Concluidas: xxx</span>
-                <span>🔄Pendentes: xxx</span>
+                <span>Concluídas: {completed}</span>
+                <span>Pendentes: {pending}</span>
             </div>
         </header>
     );
-}
+};
 
 export default Header;
