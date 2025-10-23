@@ -1,13 +1,13 @@
-const TaskItem = ({ onDelete }) => {
+const TaskItem = ({ task, onDelete }) => {
     return (
         <li className="task-item">
             <div className="task-info">
-                <h3>Title</h3>
+                <h3>{task.title}</h3>
 
-                <p>Description</p>
+                <p>{task.description}</p>
 
                 <small className="task-date">
-                    Created at: xx/xx/xxxx xx:xx:xx
+                    Criado em: {new Date(task.createdAt).toLocaleString()}
                 </small>
             </div>
 

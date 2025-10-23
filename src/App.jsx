@@ -51,7 +51,7 @@ function App() {
             <Controls openAddModal={() => setShowAddModal(true)} />
 
             {/*Task List*/}
-            <TaskList onDelete={setShowDeleteModal} />
+            <TaskList tasks={tasks} onDelete={setShowDeleteModal} />
 
             {/* Modal add new task */}
             {showAddModal && (

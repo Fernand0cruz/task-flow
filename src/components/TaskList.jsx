@@ -1,10 +1,11 @@
 import TaskItem from "./TaskItem";
 
-const TaskList = ({ onDelete }) => {
+const TaskList = ({ tasks, onDelete }) => {
     return (
         <div className="TaskList">
-            {/*map*/}
-            <TaskItem onDelete={onDelete} />
+            {tasks.map((task) => (
+                <TaskItem key={task.id} task={task} onDelete={onDelete} />
+            ))}
         </div>
     );
 };
