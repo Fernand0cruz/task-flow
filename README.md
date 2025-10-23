@@ -85,16 +85,21 @@ As tarefas são salvas no **localStorage**, garantindo que permaneçam após rec
 ## 🖼️ Imagens da Interface  
 
 ### Interface principal  
-![Interface principal](image.png)
+
+![Interface principal](./image.png)
 
 ### Modal de nova tarefa  
-![Modal nova tarefa](image-1.png)
+
+![Modal nova tarefa](./image-1.png)
 
 ### Modal de confirmação de exclusão  
-![Modal excluir tarefa](image-2.png)
+
+![Modal excluir tarefa](./image-2.png)
 
 ### Responsividade
-![alt text](image-3.png)  
+
+![Responsividade](./image-3.png)  
+
 ---
 
 ### ✨ Desenvolvido por [Fernando Cruz](https://github.com/Fernand0cruz)
