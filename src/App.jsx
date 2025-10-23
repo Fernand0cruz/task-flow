@@ -47,6 +47,10 @@ function App() {
         setShowDeleteModal(null);
     }
 
+    function toggleStatus(id) {
+        setTasks(tasks.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
+    }
+
     return (
         <div className="app-container">
             {/*Header */}
@@ -56,7 +60,11 @@ function App() {
             <Controls openAddModal={() => setShowAddModal(true)} />
 
             {/*Task List*/}
-            <TaskList tasks={tasks} onDelete={setShowDeleteModal} />
+            <TaskList
+                onToggle={toggleStatus}
+                tasks={tasks}
+                onDelete={setShowDeleteModal}
+            />
 
             {/* Modal add new task */}
             {showAddModal && (

@@ -1,4 +1,4 @@
-const TaskItem = ({ task, onDelete }) => {
+const TaskItem = ({ onToggle, task, onDelete }) => {
     return (
         <li className="task-item">
             <div className="task-info">
@@ -12,7 +12,12 @@ const TaskItem = ({ task, onDelete }) => {
             </div>
 
             <div className="actions">
-                <button className="status-btn">Pendente</button>
+                <button
+                    className={`status-btn ${task.done ? "green" : "gray"}`}
+                    onClick={() => onToggle(task.id)}
+                >
+                    {task.done ? "Concluída" : "Pendente"}
+                </button>
                 <button
                     className="delete-btn"
                     onClick={() => onDelete(task.id)}
