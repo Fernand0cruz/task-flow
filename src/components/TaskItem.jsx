@@ -13,7 +13,10 @@ const TaskItem = ({ task, onDelete }) => {
 
             <div className="actions">
                 <button className="status-btn">Pendente</button>
-                <button className="delete-btn" onClick={() => onDelete(1)}>
+                <button
+                    className="delete-btn"
+                    onClick={() => onDelete(task.id)}
+                >
                     🗑️
                 </button>
             </div>

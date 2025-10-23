@@ -1,4 +1,4 @@
-function DeleteModal({ onCancel }) {
+function DeleteModal({ onConfirm, onCancel }) {
     return (
         <div className="modal-overlay">
             <div className="modal">
@@ -6,7 +6,9 @@ function DeleteModal({ onCancel }) {
                 <p>Certeza que deseja excluire essa tarefa?</p>
                 <p>Essa ação não pode ser desfeita.</p>
                 <div className="modal-actions">
-                    <button className="red">Excluir</button>
+                    <button className="red" onClick={onConfirm}>
+                        Excluir
+                    </button>
                     <button className="neutral" onClick={onCancel}>
                         Cancelar
                     </button>

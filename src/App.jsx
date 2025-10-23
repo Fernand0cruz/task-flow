@@ -42,6 +42,11 @@ function App() {
         ]);
     }
 
+    function deleteTask(id) {
+        setTasks(tasks.filter((t) => t.id !== id));
+        setShowDeleteModal(null);
+    }
+
     return (
         <div className="app-container">
             {/*Header */}
@@ -63,7 +68,10 @@ function App() {
 
             {/*Modal confirm delete task*/}
             {showDeleteModal && (
-                <DeleteModal onCancel={() => setShowDeleteModal(null)} />
+                <DeleteModal
+                    onConfirm={() => deleteTask(showDeleteModal)}
+                    onCancel={() => setShowDeleteModal(null)}
+                />
             )}
         </div>
     );
