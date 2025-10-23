@@ -12,6 +12,7 @@ function App() {
     const [loaded, setLoaded] = useState(false);
     const [tasks, setTasks] = useState([]);
     const [search, setSearch] = useState("");
+    const [filter, setFilter] = useState("all");
 
     useEffect(() => {
         const saved = localStorage.getItem("tasks");
@@ -58,7 +59,11 @@ function App() {
         const matchesSearch =
             t.title.toLowerCase().includes(search.toLowerCase()) ||
             t.description.toLowerCase().includes(search.toLowerCase());
-        return matchesSearch;
+        const matchesFilter =
+            filter === "all" ||
+            (filter === "done" && t.done) ||
+            (filter === "pending" && !t.done);
+        return matchesSearch && matchesFilter;
     });
 
     return (
@@ -73,6 +78,8 @@ function App() {
             <Controls
                 search={search}
                 setSearch={setSearch}
+                filter={filter}
+                setFilter={setFilter}
                 openAddModal={() => setShowAddModal(true)}
             />
 

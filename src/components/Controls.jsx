@@ -1,4 +1,4 @@
-const Controls = ({ search, setSearch, openAddModal }) => {
+const Controls = ({ filter, setFilter, search, setSearch, openAddModal }) => {
     return (
         <div className="controls">
             <input
@@ -8,7 +8,7 @@ const Controls = ({ search, setSearch, openAddModal }) => {
                 onChange={(e) => setSearch(e.target.value)}
             />
 
-            <select>
+            <select value={filter} onChange={(e) => setFilter(e.target.value)}>
                 <option value="all">Todas</option>
                 <option value="done">Concluídas</option>
                 <option value="pending">Pendentes</option>
