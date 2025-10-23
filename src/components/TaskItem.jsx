@@ -1,4 +1,4 @@
-const TaskItem = () => {
+const TaskItem = ({ onDelete }) => {
     return (
         <li className="task-item">
             <div className="task-info">
@@ -13,7 +13,9 @@ const TaskItem = () => {
 
             <div className="actions">
                 <button className="status-btn">Pendente</button>
-                <button className="delete-btn">🗑️</button>
+                <button className="delete-btn" onClick={() => onDelete(1)}>
+                    🗑️
+                </button>
             </div>
         </li>
     );

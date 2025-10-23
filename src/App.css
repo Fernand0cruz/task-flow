@@ -122,7 +122,7 @@ header h1 {
 }
 
 .delete-btn:hover {
-    background: #dc2626;
+    background: #c62828;
 }
 
 .modal-overlay {
@@ -144,6 +144,10 @@ header h1 {
 }
 
 .modal h2 {
+    padding-bottom: 24px;
+}
+
+.modal p:last-of-type {
     padding-bottom: 24px;
 }
 
@@ -179,6 +183,24 @@ header h1 {
     padding: 8px 14px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.modal-actions .red:hover {
+    background: #c62828;
+}
+
+.modal-actions .neutral {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-actions .neutral:hover {
+    background: #1a1a1a;
 }
 
 .error-msg {
