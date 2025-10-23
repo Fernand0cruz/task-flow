@@ -10,6 +10,7 @@ body {
     padding: 20px;
 }
 
+/*componente header*/
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -30,6 +31,8 @@ header h1 {
     color: #aaa;
 }
 
+
+/*componente control*/
 .add-btn {
     background: #16a34a;
     border: none;
@@ -61,11 +64,13 @@ header h1 {
     background: #22c55e;
 }
 
+/* componente taskList */
 .task-list {
     list-style: none;
     padding: 0;
 }
 
+/* componente taskItem */
 .task-item {
     background: #1a1a1a;
     border: 1px solid #333;
@@ -139,6 +144,8 @@ header h1 {
     background: #c62828;
 }
 
+
+/* componente addTaskModal e deleteModal*/
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -218,6 +225,7 @@ header h1 {
     background: #1a1a1a;
 }
 
+/* estilo das mensagens de erros */
 .error-msg {
     display: block;
     color: #d9534f;
@@ -226,8 +234,63 @@ header h1 {
     margin: 6px 0 12px 0;
 }
 
+/* estilo de apresentação caso não aja tarefa registrada*/
 .empty {
     text-align: center;
     color: #777;
     margin-top: 30px;
+}
+
+/* adaptando responsividade para telas menores de 768 */
+@media (max-width: 768px) {
+    .app-container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 16px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .add-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .actions {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 10px;
+        gap: 8px;
+    }
+
+    .modal {
+        width: 95%;
+        padding: 16px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .modal-actions button {
+        width: 100%;
+    }
 }
